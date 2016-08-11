@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Gerard Braad
+  description: Deploys Kubernetes (k8s) master
+  company: gbraad.nl
+  license: BSD
+  min_ansible_version: 2.1
+  platforms:
+  - name: CentOS
+    versions:
+    - 7.2
+  - name: Fedora
+    versions:
+    - 23
+    - 24
+  galaxy_tags:
+  - web
+dependencies: []

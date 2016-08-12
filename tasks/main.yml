@@ -1,4 +1,21 @@
 ---
+- name: Set the initial value for the is_atomic fact
+  set_fact:
+    is_atomic: false
+
+- name: Determine if Atomic
+  stat: path=/run/ostree-booted
+  register: s
+  changed_when: false
+
+- name: Set the is_atomic fact
+  set_fact:
+    is_atomic: true
+  when: s.stat.exists
+
+
 - include: install.yml
+  when: not is_atomic and ansible_distribution == "CentOS"
+
 - include: configure_k8s.yml
 - include: configure_flannel.yml

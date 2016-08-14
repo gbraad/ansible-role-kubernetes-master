@@ -6,9 +6,9 @@ galaxy_info:
   license: BSD
   min_ansible_version: 2.1
   platforms:
-  - name: CentOS
+  - name: EL
     versions:
-    - 7.2
+    - 7
   - name: Fedora
     versions:
     - 23

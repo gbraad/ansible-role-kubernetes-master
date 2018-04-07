@@ -2,3 +2,8 @@
   service:
     name: kube-apiserver
     state: restarted
+
+- name: restart etcd
+  service:
+    name: etcd
+    state: restarted
